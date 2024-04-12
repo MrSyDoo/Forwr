@@ -1,5 +1,5 @@
 import time as tm
-from database import Db, db
+from database import Database, db
 from .test import parse_buttons
 
 STATUS = {}
