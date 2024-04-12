@@ -1,6 +1,6 @@
 from os import environ
 import motor.motor_asyncio
-from config import DATABASE_URI, DATABASE_NAME
+from config import Config
 
 class Database:
 
