@@ -1,6 +1,7 @@
 import asyncio 
 import time, datetime 
-from database import db 
+from database import db
+from info import DATABASE_URI
 from config import Config
 from pyrogram import Client, filters 
 from pyrogram.errors import InputUserDeactivated, FloodWait, UserIsBlocked
