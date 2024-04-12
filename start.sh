@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/maharaja91/Forward-bot.git /Forward
+  git clone https://github.com/Mr-SyD-OrG/Forward.git /Forward
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /Forward
