@@ -1,7 +1,7 @@
 import os
 import sys
 import asyncio 
-from database import Db, db
+from database import Database, db
 from config import Config, temp
 from script import Script
 from pyrogram import Client, filters
