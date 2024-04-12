@@ -7,7 +7,7 @@ class Config:
     API_HASH = environ.get('API_HASH', '')
     BOT_TOKEN = environ.get('BOT_TOKEN', "") 
     BOT_SESSION = environ.get("BOT_SESSION", "bot") 
-    DATABASE_URI = environ.get("DATABASE_URI", "")
+    DATABASE_URI = environ.get('DATABASE_URI', "")
     DATABASE_NAME = environ.get("DATABASE_NAME", "cluster0")
     BOT_OWNER_ID = os.environ.get("BOT_OWNER_ID", "")
 
