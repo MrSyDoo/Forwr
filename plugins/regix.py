@@ -5,7 +5,7 @@ import time
 import asyncio 
 import logging
 from .utils import STS
-from database import Db 
+from database import Database 
 from .test import CLIENT 
 from config import Config, temp
 from script import Script
