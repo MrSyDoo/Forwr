@@ -1,7 +1,7 @@
 import re
 import asyncio 
 from .utils import STS
-from database import Db, db
+from database import Database, db
 from config import temp 
 from script import Script
 from pyrogram import Client, filters 
