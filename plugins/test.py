@@ -3,7 +3,7 @@ import re
 import sys
 import asyncio 
 import logging 
-from database import Db, db
+from database import Database, db
 from config import Config, temp
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message 
