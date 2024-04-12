@@ -1,5 +1,5 @@
 import re, asyncio
-from database import Db, db
+from database import Database, db
 from config import temp
 from .test import CLIENT 
 from script import Script
