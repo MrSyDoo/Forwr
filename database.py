@@ -1,7 +1,7 @@
 from os import environ
 import motor.motor_asyncio
 from config import Config
-
+from info import DATABASE_URI
 class Database:
 
     def __init__(self, uri, database_name):
