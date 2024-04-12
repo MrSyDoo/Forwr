@@ -1,5 +1,5 @@
 import asyncio 
-from database import Db, db
+from database import Database, db
 from script import Script
 from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons
