@@ -4,6 +4,8 @@
 
 import os
 from config import Config
+from script import Script
+from info import PORT, LOG_CHANNEL
 from pyrogram import Client as ACE , idle
 import asyncio, logging
 import tgcrypto
@@ -44,6 +46,11 @@ if __name__ == "__main__" :
         await AceBot.start()
         bot_info  = await AceBot.get_me()
         LOGGER.info(f"<--- @{bot_info.username} Started (c) ACE --->")
+        await self.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
         await idle()
     
     asyncio.get_event_loop().run_until_complete(main())
