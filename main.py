@@ -10,6 +10,7 @@ from info import PORT, LOG_CHANNEL
 from pyrogram import Client as ACE , idle
 import asyncio, logging
 import tgcrypto
+from plugins import web_server
 from aiohttp import web
 from pyromod import listen
 from logging.handlers import RotatingFileHandler
