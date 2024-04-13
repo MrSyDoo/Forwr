@@ -8,10 +8,11 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
 
 main_buttons = [[
-        InlineKeyboardButton('📜 Support Group', url='https://t.me/venombotupdates'),
-        InlineKeyboardButton('📢 Update Channel ', url='https://t.me/venombotsupport')
+        InlineKeyboardButton('🌋 Sᴜᴩᴩ0ʀᴛ Gʀ0ᴜᴩ 🌋', url='https://t.me/venombotupdates'),
+        InlineKeyboardButton('🗞️ Uᴩᴅᴀᴛᴇꜱ CʜΔɴɴᴇʟ 🗞️', url='https://t.me/BOT_CRACKER')
         ],[
-        InlineKeyboardButton('❗️Help', callback_data='help') 
+        InlineKeyboardButton('🎐 Hᴇʟᴩ 🎐', callback_data='help'),
+        InlineKeyboardButton('🔍 Δʙᴏᴜᴛ 🔎',+callback_data='about')
         
 
 ]]
@@ -46,12 +47,11 @@ async def restart(client, message):
 @Client.on_callback_query(filters.regex(r'^help'))
 async def helpcb(bot, query):
     buttons = [[
-            InlineKeyboardButton('💠 About 💠', callback_data='about'),
-            InlineKeyboardButton('💠 Status 💠', callback_data='status'),
+            InlineKeyboardButton('💦 Sᴛᴀᴛᴜꜱ 💦', callback_data='status'),
             ],[
-            InlineKeyboardButton('💠 How To Use Me ? 💠', callback_data='how_to_use')
+            InlineKeyboardButton('🗺️ Uꜱᴇʀ Mᴀɴᴜᴀʟ 🗺️', callback_data='how_to_use')
             ],[
-            InlineKeyboardButton('💠 Settings 💠', callback_data='settings#main')
+            InlineKeyboardButton('🪼 Settings 💠🪼', callback_data='settings#main')
             ],[
             InlineKeyboardButton('• back', callback_data='back')
     ]]
