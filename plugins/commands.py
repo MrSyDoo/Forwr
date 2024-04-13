@@ -51,9 +51,9 @@ async def helpcb(bot, query):
             ],[
             InlineKeyboardButton('🗺️ Uꜱᴇʀ Mᴀɴᴜᴀʟ 🗺️', callback_data='how_to_use')
             ],[
-            InlineKeyboardButton('🪼 Settings 💠🪼', callback_data='settings#main')
+            InlineKeyboardButton('🪼 Sᴇᴛᴛɪɴɢꜱ 🪼', callback_data='settings#main')
             ],[
-            InlineKeyboardButton('• back', callback_data='back')
+            InlineKeyboardButton('ʙΔᴄᴋ', callback_data='back')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
