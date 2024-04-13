@@ -110,3 +110,5 @@ I can forward all message from one channel to another channel</i>
 SETTINGS_TXT = """<b>change your settings as your wish</b>"""
 
 BOT_TOKEN_TEXT = """<b>1) create a bot using @BotFather\n2) Then you will get a message with bot token\n3) Forward that message to me</b>"""
+
+RESTART_TXT = """On 🚨"""
