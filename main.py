@@ -3,6 +3,7 @@
 # (c) ACE 
 
 import os
+from datetime import date, datetime 
 from config import Config
 from script import Script
 from info import PORT, LOG_CHANNEL
@@ -46,6 +47,7 @@ if __name__ == "__main__" :
         await AceBot.start()
         bot_info  = await AceBot.get_me()
         LOGGER.info(f"<--- @{bot_info.username} Started (c) ACE --->")
+        today = date.today()
         await AceBot.send_message(chat_id=LOG_CHANNEL, text=Script.RESTART_TXT.format(today, time))
         app = web.AppRunner(await web_server())
         await app.setup()
