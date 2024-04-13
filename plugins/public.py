@@ -5,6 +5,7 @@ from database import Database, db
 from config import temp
 from info import AUTH_CHANNEL
 from script import Script
+from MrSyD import is_req_subscribed
 from pyrogram import Client, filters 
 from pyrogram.errors import FloodWait 
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as PrivateChat
