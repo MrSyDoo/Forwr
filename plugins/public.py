@@ -27,7 +27,11 @@ async def run(bot, message):
                 InlineKeyboardButton(
                     "📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌", url=invite_link.invite_link
                 )
-            ]
+            ],[
+                InlineKeyboardButton(
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data=sydcheck
+                )
+              ]
         ]
         await bot.send_message(
             chat_id=message.from_user.id,
@@ -107,3 +111,10 @@ async def run(bot, message):
         reply_markup=reply_markup
     )
     STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id))
+
+elif query.data("sydcheck"):
+        if AUTH_CHANNEL and not await is_req_subscribed(client, query):
+            await query.answer("Jᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            return
+        await query.message.edit_text(f"<b><strike>Hi</strike></b>")
+        
