@@ -29,7 +29,7 @@ async def run(bot, message):
                 )
             ],[
                 InlineKeyboardButton(
-                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data=sydcheck
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheck'
                 )
               ]
         ]
