@@ -29,10 +29,8 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(main_buttons)
     await message.reply_photo(
         photo=random.choice(PICS),
-        chat_id=message.chat.id,
         reply_markup=reply_markup,
-        text=Script.START_TXT.format(
-                message.from_user.first_name))
+        text=Script.START_TXT.format(message.from_user.first_name))
 
 #==================Restart Function==================#
 
