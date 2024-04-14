@@ -1,4 +1,5 @@
 import logging
+from pyrogram import enums
 from pyrogram.errors import UserNotParticipant
 from database import db
 from info import AUTH_CHANNEL
