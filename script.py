@@ -34,14 +34,14 @@ I can forward all message from one channel to another channel</i>
 ► __Then use /forward to forward messages__</b>"""
   
   ABOUT_TXT = """
-╔════❰ ғᴏʀᴡᴀʀᴅ ʙᴏᴛ ❱═❍⊱❁۪۪
+╔════❰ Δʙᴏᴜᴛ ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼📃ʙᴏᴛ : [Fᴏʀᴡᴀʀᴅ Bᴏᴛ](https://t.me/kr_forward_bot)
-║┣⪼👦Cʀᴇᴀᴛᴏʀ : [『𝐓𝐆』 ཌ𑫞ᴀᴘᴘƴད°ⲃꮐꮇ°ツ](https://t.me/tamil_kid)
-║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : Hᴇʀᴏᴋᴜ
-║┣⪼🗣️Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ3
+║┣⪼📃ʙᴏᴛ : [Fᴏʀᴡᴀʀᴅ Bᴏᴛ](https://t.me/Mr_File_Forward_Bot)
+║┣⪼👦Cʀᴇᴀᴛᴏʀ : [мґ ;) 𝕾𝖄𝕯 ️✨️️](https://t.me/tamil_kid)
+║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : 『𝐓𝐆』
+║┣⪼🗣️Lᴀɴɢᴜᴀɢᴇ : 
 ║┣⪼📚Lɪʙʀᴀʀʏ : Pʏʀᴏɢʀᴀᴍ Asʏɴᴄɪᴏ 2.0.0 
-║┣⪼🗒️Vᴇʀsɪᴏɴ : 0.0.0
+║┣⪼🗒️Vᴇʀsɪᴏɴ : V1
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪
 """
