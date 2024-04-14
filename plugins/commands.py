@@ -3,6 +3,7 @@ import sys
 import asyncio
 import random
 from database import Database, db
+from info import AUTH_CHANNEL
 from config import Config, temp
 from info import PICS
 from script import Script
@@ -99,3 +100,12 @@ async def status(bot, query):
         reply_markup=reply_markup,
         disable_web_page_preview=True,
     )
+
+@Client.on_callback_query(filters.regex(r'^sydcheck'))
+async def sydcheck(bot, query):
+    if AUTH_CHANNEL and not await is_req_subscribed(client, query):
+            await query.answer("Jᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            return
+    await query.message.edit_text("<b>Hi</b>")
+
+        
