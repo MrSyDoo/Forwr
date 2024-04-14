@@ -6,7 +6,7 @@ from config import temp
 from info import AUTH_CHANNEL
 from script import Script
 from MrSyD import is_req_subscribed
-from pyrogram import Client, filters 
+from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait 
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as PrivateChat
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified, ChannelPrivate
