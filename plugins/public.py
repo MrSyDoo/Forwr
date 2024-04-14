@@ -119,5 +119,5 @@ async def cb_handler(client: Client, query: CallbackQuery):
      if AUTH_CHANNEL and not await is_req_subscribed(bot, query):
             await query.answer("Jᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
             return
-        await query.message.edit_text("<b><strike>Hi</strike></b>")
+        await query.message.edit_text("<b>Hi</b>")
         
