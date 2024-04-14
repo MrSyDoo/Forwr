@@ -16,7 +16,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 
 @Client.on_message(filters.private & filters.command(["forward"]))
 async def run(bot, message):
-    if AUTH_CHANNEL and not await is_req_subscribed(client, message):
+    if AUTH_CHANNEL and not await is_req_subscribed(bot, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
         except ChatAdminRequired:
