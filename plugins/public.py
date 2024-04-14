@@ -112,12 +112,4 @@ async def run(bot, message):
     )
     STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id))
 
-
-@Client.on_callback_query()
-async def cb_handler(client: Client, query: CallbackQuery):
-    if query.data == "sydcheck":
-     if AUTH_CHANNEL and not await is_req_subscribed(client, query):
-            await query.answer("Jᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
-            return
-     await query.message.edit_text("<b>Hi</b>")
         
