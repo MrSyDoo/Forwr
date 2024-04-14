@@ -17,3 +17,4 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('BOT_OWNER_ID', '').split()]
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 PORT = environ.get("PORT", "8080")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/65fe86fc02a73f6fcf0ce.jpg')).split()
