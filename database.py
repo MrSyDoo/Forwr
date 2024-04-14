@@ -10,7 +10,8 @@ class Database:
         self.bot = self.db.bots
         self.col = self.db.users
         self.nfy = self.db.notify
-        self.chl = self.db.channels 
+        self.chl = self.db.channels
+        self.req = self.db.requests
 
     def new_user(self, id, name):
         return dict(
