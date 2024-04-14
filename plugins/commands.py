@@ -27,7 +27,7 @@ async def start(client, message):
     if not await db.is_user_exist(user.id):
       await db.add_user(user.id, user.first_name)
     reply_markup = InlineKeyboardMarkup(main_buttons)
-    await client.reply_photo(
+    await message.reply_photo(
         photo=random.choice(PICS),
         chat_id=message.chat.id,
         reply_markup=reply_markup,
