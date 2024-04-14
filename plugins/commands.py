@@ -1,8 +1,10 @@
 import os
 import sys
-import asyncio 
+import asyncio
+import random
 from database import Database, db
 from config import Config, temp
+from info import PICS
 from script import Script
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
@@ -25,7 +27,8 @@ async def start(client, message):
     if not await db.is_user_exist(user.id):
       await db.add_user(user.id, user.first_name)
     reply_markup = InlineKeyboardMarkup(main_buttons)
-    await client.send_message(
+    await client.reply_photo(
+        photo=random.choice(PICS),
         chat_id=message.chat.id,
         reply_markup=reply_markup,
         text=Script.START_TXT.format(
