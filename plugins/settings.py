@@ -6,6 +6,7 @@ from MrSyD import is_reqa_subscribed
 from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.errors import ChatAdminRequired
 
 CLIENT = CLIENT()
 
@@ -174,7 +175,7 @@ async def settings_query(bot, query):
                 )
             ],[
                 InlineKeyboardButton(
-                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheckI'
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='settings#addcaption'
                 )
               ]
         ]
