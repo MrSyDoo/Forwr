@@ -20,3 +20,5 @@ PORT = environ.get("PORT", "8080")
 PICS = (environ.get('PICS', 'https://telegra.ph/file/65fe86fc02a73f6fcf0ce.jpg')).split()
 syd_channel = environ.get('SYD_CHANNEL', '')
 SYD_CHANNEL = int(syd_channel) if syd_channel and id_pattern.search(syd_channel) else None
+botcracker_chnl = environ.get('BOTCRACKER_CHNL', '')
+BOTCRACKER_CHNL = int(botcracker_chnl) if botcracker_chnl and id_pattern.search(botcracker_chnl) else None
