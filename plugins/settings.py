@@ -1,6 +1,8 @@
 import asyncio 
 from database import Database, db
 from script import Script
+from info import SYD_CHANNEL
+from MrSyD import is_reqa_subscribed
 from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -159,9 +161,9 @@ async def settings_query(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="addcaption":
-     if SYD_CHANNEL and not await is_req_subscribed(bot, message):
+     if SYD_CHANNEL and not await is_reqa_subscribed(bot, message):
         try:
-            invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
+            invite_link = await bot.create_chat_invite_link(int(SYD_CHANNEL), creates_join_request=True)
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
@@ -172,7 +174,7 @@ async def settings_query(bot, query):
                 )
             ],[
                 InlineKeyboardButton(
-                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheck'
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheckI'
                 )
               ]
         ]
