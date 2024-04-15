@@ -16,7 +16,7 @@ main_buttons = [[
         InlineKeyboardButton('🗞️ Uᴩᴅᴀᴛᴇꜱ CʜΔɴɴᴇʟ 🗞️', url='https://t.me/BOT_CRACKER')
         ],[
         InlineKeyboardButton('🎐 Hᴇʟᴩ 🎐', callback_data='help'),
-        InlineKeyboardButton('🔍 Δʙᴏᴜᴛ 🔎', callback_data='about')
+        InlineKeyboardButton('🔍 Δʙᴏᴜᴛ 🔎', callback_data='aboutt')
         
 
 ]]
@@ -58,7 +58,7 @@ async def helpcb(bot, query):
             ],[
             InlineKeyboardButton('🪼 Sᴇᴛᴛɪɴɢꜱ 🪼', callback_data='settings#main')
             ],[
-            InlineKeyboardButton('ʙΔᴄᴋ', callback_data='back')
+            InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='back')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
@@ -67,7 +67,7 @@ async def helpcb(bot, query):
 
 @Client.on_callback_query(filters.regex(r'^how_to_use'))
 async def how_to_use(bot, query):
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.HOW_USE_TXT,
@@ -85,7 +85,17 @@ async def back(bot, query):
 
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
+        text=Script.ABOUT_TXT,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True,
+    )
+
+@Client.on_callback_query(filters.regex(r'^aboutt'))
+async def about(bot, query):
+    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='start')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
@@ -96,7 +106,7 @@ async def about(bot, query):
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.STATUS_TXT.format(users_count, bots_count, temp.forwardings),
