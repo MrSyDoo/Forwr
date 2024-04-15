@@ -159,6 +159,30 @@ async def settings_query(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="addcaption":
+     if SYD_CHANNEL and not await is_req_subscribed(bot, message):
+        try:
+            invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        btn = [
+            [
+                InlineKeyboardButton(
+                    "📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌", url=invite_link.invite_link
+                )
+            ],[
+                InlineKeyboardButton(
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheck'
+                )
+              ]
+        ]
+        await bot.send_message(
+            chat_id=message.from_user.id,
+            text="ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.",
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode=enums.ParseMode.MARKDOWN
+            )
+        return
      await query.message.delete()
      caption = await bot.ask(query.message.chat.id, text="Send your custom caption\n/cancel - <code>cancel this process</code>")
      if caption.text=="/cancel":
