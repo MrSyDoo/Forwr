@@ -10,7 +10,7 @@ CLIENT = CLIENT()
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
    await message.reply_text(
-     "<b>change your settings as your wish</b>",
+     "<b>📝 Eᴅɪᴛ Δɴᴅ ᴄʜᴀɴɢᴇ ꜱΞᴛᴛɪɴɢꜱ ᴀꜱ ʏᴏᴜʀ ᴡɪꜱʜ.......\n<blockquote>ᴩʀᴏ ✨</blockquote></b>",
      reply_markup=main_buttons()
      )
 
@@ -18,7 +18,7 @@ async def settings(client, message):
 async def settings_query(bot, query):
   user_id = query.from_user.id
   i, type = query.data.split("#")
-  buttons = [[InlineKeyboardButton('back', callback_data="settings#main")]]
+  buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data="settings#main")]]
   if type=="main":
      await query.message.edit_text(
        "<b>change your settings as your wish</b>",
@@ -31,11 +31,11 @@ async def settings_query(bot, query):
         buttons.append([InlineKeyboardButton(_bot['name'],
                          callback_data=f"settings")])
      else:
-        buttons.append([InlineKeyboardButton('✚ Add bot ✚', 
+        buttons.append([InlineKeyboardButton('✚ Aᴅᴅ ʙᴏᴛ ✚', 
                          callback_data="settings#addbot")])
-        buttons.append([InlineKeyboardButton('✚ Add User bot ✚', 
+        buttons.append([InlineKeyboardButton('✚ Aᴅᴅ Uꜱᴇʀ ʙᴏᴛ ✚', 
                          callback_data="settings#adduserbot")])
-     buttons.append([InlineKeyboardButton('back', 
+     buttons.append([InlineKeyboardButton('«« ʙΔᴄᴋ', 
                       callback_data="settingsn")])
      await query.message.edit_text(
        "<b><u>My Bots</b></u>\n\n<b>You can manage your bots in here</b>",
@@ -46,7 +46,7 @@ async def settings_query(bot, query):
      bot = await CLIENT.add_bot(bot, query)
      if bot != True: return
      await query.message.reply_text(
-        "<b>bot token successfully added to db</b>",
+        "<b>Bᴏᴛ ꜱUᴄᴄᴇꜱꜱ ꜰUʟʟʏ Δᴅᴅᴇᴅ ᴛᴏ Sʏᴅ-ʙᴀꜱᴇ</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="adduserbot":
@@ -54,7 +54,7 @@ async def settings_query(bot, query):
      user = await CLIENT.add_session(bot, query)
      if user != True: return
      await query.message.reply_text(
-        "<b>session successfully added to db</b>",
+        "<b>Sᴇꜱꜱɪᴏɴ ꜱUᴄᴄᴇꜱꜱ ꜰUʟʟʏ Δᴅᴅᴇᴅ ᴛᴏ Sʏᴅ-ʙᴀꜱᴇ</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="channels":
@@ -63,9 +63,9 @@ async def settings_query(bot, query):
      for channel in channels:
         buttons.append([InlineKeyboardButton(f"{channel['title']}",
                          callback_data=f"settings#editchannels_{channel['chat_id']}")])
-     buttons.append([InlineKeyboardButton('✚ Add Channel ✚', 
+     buttons.append([InlineKeyboardButton('✚ Aᴅᴅ Cʜᴀɴɴᴇʟ ✚', 
                       callback_data="settings#addchannel")])
-     buttons.append([InlineKeyboardButton('back', 
+     buttons.append([InlineKeyboardButton('«« ʙΔᴄᴋ', 
                       callback_data="settings")])
      await query.message.edit_text( 
        "<b><u>My Channels</b></u>\n\n<b>you can manage your target chats in here</b>",
