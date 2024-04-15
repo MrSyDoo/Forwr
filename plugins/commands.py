@@ -5,6 +5,7 @@ import random
 from database import Database, db
 from info import AUTH_CHANNEL
 from config import Config, temp
+from MrSyD import is_req_subscribed
 from info import PICS
 from script import Script
 from pyrogram import Client, filters
