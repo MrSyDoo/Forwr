@@ -162,7 +162,7 @@ async def settings_query(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="addcaption":
-     if SYD_CHANNEL and not await is_reqa_subscribed(bot, message):
+     if SYD_CHANNEL and not await is_reqa_subscribed(bot, query):
         try:
             invite_link = await bot.create_chat_invite_link(int(SYD_CHANNEL), creates_join_request=True)
         except ChatAdminRequired:
