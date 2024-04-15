@@ -32,7 +32,8 @@ async def start(client, message):
     await message.reply_photo(
         photo=random.choice(PICS),
         reply_markup=reply_markup,
-        text=Script.START_TXT.format(message.from_user.first_name))
+        text=Script.START_TXT.format(message.from_user.first_name)
+    )
 
 #==================Restart Function==================#
 
