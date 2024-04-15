@@ -8,7 +8,7 @@ from config import Config, temp
 from MrSyD import is_req_subscribed
 from info import PICS
 from script import Script
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
 
 main_buttons = [[
@@ -30,9 +30,10 @@ async def start(client, message):
       await db.add_user(user.id, user.first_name)
     reply_markup = InlineKeyboardMarkup(main_buttons)
     await message.reply_photo(
-        photo=random.choice(PICS),
-        reply_markup=reply_markup,
-        text=Script.START_TXT.format(message.from_user.first_name)
+            photo=random.choice(PICS),
+            caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
     )
 
 #==================Restart Function==================#
