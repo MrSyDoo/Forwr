@@ -31,7 +31,7 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(main_buttons)
     await message.reply_photo(
             photo=random.choice(PICS),
-            caption=Script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
+            caption=Script.START_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
     )
