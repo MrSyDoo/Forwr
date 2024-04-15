@@ -6,16 +6,16 @@ class  Script(object):
 <i>I'm a Advanced Auto Forward Bot
 I can forward all message from one channel to another channel</i>
 **Click help button to know More about me**"""
-  HELP_TXT = """<b><u>🔆 HELP</b></u>
+  HELP_TXT = """<b><u>🔆 Hᴇʟᴩ</b></u>
 
-<u>**📚 Available commands:**</u>
-<b>⏣ __/start - check I'm alive__ 
-⏣ __/forward - forward messages__
-⏣ __/unequify - delete duplicate messages in channels__
-⏣ __/settings - configure your settings__
-⏣ __/reset - reset your settings__</b>
+<u>**🏖️ ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅꜱ..:**</u>
+<b>⏣ __/start - ᴄʜᴇᴄᴋ ɪ'ᴍ ᴀʟɪᴠᴇ__ 
+⏣ __/forward - Fᴏʀᴡᴀʀᴅ ᴍᴇꜱꜱᴀɢᴇꜱ__
+⏣ __/unequify - Dᴇʟᴇᴛᴇ ᴅᴜᴩʟɪᴄᴀᴛᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ꜰɪʟᴇꜱ__
+⏣ __/settings - ᴄᴏɴꜰɪɢᴜʀᴇ ʏᴏᴜʀ ꜱᴇᴛᴛɪɴɢꜱ__
+⏣ __/reset - ʀᴇꜱᴇᴛ ᴛʜᴇ ꜱᴇᴛᴛɪɴɢꜱ__</b>
 
-<b><u>💢 Features:</b></u>
+<b><u>💢 FΔᴛᴜʀᴇꜱ:</b></u>
 <b>► __Forward message from public channel to your channel without admin permission. if the channel is private need admin permission__
 ► __Forward message from private channel to your channel by using userbot(user must be member in there)__
 ► __custom caption__
@@ -54,6 +54,8 @@ I can forward all message from one channel to another channel</i>
 ║┃
 ║┣⪼**🔃 Fᴏʀᴡᴀʀᴅɪɴɢs:** `{}`
 ║┃
+║┣⪼**𝗝𝗼𝗜𝗡 ✨❤️‍🔥; @Mod_Moviez_X **
+║┃
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪
 """
@@ -65,7 +67,7 @@ I can forward all message from one channel to another channel</i>
   USER_DETAILS = """<b><u>📄 USERBOT DETAILS</b></u>\n\n<b>➣ NAME:</b> <code>{}</code>\n<b>➣ USER ID:</b> <code>{}</code>\n<b>➣ USERNAME:</b> @{}""" 
          
   TEXT = """
-╔════❰ ғᴏʀᴡᴀʀᴅ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
+╔════❰ ғ0ʀᴡᴀʀᴅ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼<b>🕵 ғᴇᴄʜᴇᴅ Msɢ :</b> <code>{}</code>
 ║┃
@@ -88,9 +90,9 @@ I can forward all message from one channel to another channel</i>
   DUPLICATE_TEXT = """
 ╔════❰ ᴜɴᴇǫᴜɪғʏ sᴛᴀᴛᴜs ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼ <b>ғᴇᴛᴄʜᴇᴅ ғɪʟᴇs:</b> <code>{}</code>
+║┣⪼ <b>ғΞᴛᴄʜᴇᴅ ғɪʟᴇs:</b> <code>{}</code>
 ║┃
-║┣⪼ <b>ᴅᴜᴘʟɪᴄᴀᴛᴇ ᴅᴇʟᴇᴛᴇᴅ:</b> <code>{}</code> 
+║┣⪼ <b>ᴅUᴘʟɪᴄᴀᴛᴇ ᴅᴇʟᴇᴛᴇᴅ:</b> <code>{}</code> 
 ║╰━━━━━━━━━━━━━━━➣
 ╚════❰ {} ❱══❍⊱❁۪۪
 """
