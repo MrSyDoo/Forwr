@@ -180,7 +180,7 @@ async def settings_query(bot, query):
               ]
         ]
      await query.message.edit_text(
-         chat_id=query.from_user.id,
+         user_id=query.from_user.id,
          text="ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.",
          reply_markup=InlineKeyboardMarkup(syd),
          parse_mode=enums.ParseMode.MARKDOWN
