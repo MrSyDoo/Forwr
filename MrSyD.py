@@ -1,7 +1,7 @@
 import logging
 from pyrogram import enums
 from pyrogram.errors import UserNotParticipant
-from database import db
+from database import db, bd
 from info import AUTH_CHANNEL, BOTCRACKER_CHNL, SYD_CHANNEL
 
 
@@ -22,7 +22,7 @@ async def is_req_subscribed(bot, query):
 
 
 async def is_reqa_subscribed(bot, query):
-    if await db.find_join_reqa(query.from_user.id):
+    if await bd.find_join_reqa(query.from_user.id):
         return True
     try:
         user = await bot.get_chat_member(SYD_CHANNEL, query.from_user.id)
