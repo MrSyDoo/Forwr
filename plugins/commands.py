@@ -3,9 +3,9 @@ import sys
 import asyncio
 import random
 from database import Database, db
-from info import AUTH_CHANNEL
+from info import AUTH_CHANNEL, BOTCRACKER_CHNL
 from config import Config, temp
-from MrSyD import is_req_subscribed
+from MrSyD import is_req_subscribed, is_reqb_subscribed
 from info import PICS
 from script import Script
 from pyrogram import Client, filters, enums
@@ -113,6 +113,14 @@ async def status(bot, query):
         reply_markup=reply_markup,
         disable_web_page_preview=True,
     )
+
+@Client.on_callback_query(filters.regex(r'^sydcheck'))
+async def sydcheck(bot, query):
+    if AUTH_CHANNEL and not await is_req_subscribed(bot, query):
+            await query.answer("ʀᴇQᴇᴜꜱᴛ ᴛᴏ Jᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒 Dᴏɴᴛ ᴛʀʏ ᴛᴏ ꜱʜᴏᴡ ʏᴏᴜʀ ᴏᴠᴇʀꜱᴍᴀʀᴛɴᴇꜱꜱ ᴩʟᴢ🥲🥲", show_alert=True)
+            return
+    await query.message.edit_text("<b>Oᴋ✅, ʏᴏᴜ ᴄΔɴ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜʀ ᴩʀᴏᴄᴇꜱꜱ.... Δɴᴅ Tʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱɪɴɢ ᴏᴜʀ ʙᴏᴛ... 🧭</b>/forward")
+
 
 @Client.on_callback_query(filters.regex(r'^sydcheck'))
 async def sydcheck(bot, query):
