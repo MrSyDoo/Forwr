@@ -41,7 +41,7 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('«« ʙΔᴄᴋ', 
                       callback_data="settingsn")])
      await query.message.edit_text(
-       "<b><u>My Bots</b></u>\n\n<b>You can manage your bots in here</b>",
+       "<b><u>Mʏ 8ᴏᴛꜱ</b></u>\n\n<b>Yoᴜ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ʙᴏᴛ'ꜱ ʜᴇʀᴇ😜</b>",
        reply_markup=InlineKeyboardMarkup(buttons))
 
   elif type=="addbot":
@@ -79,7 +79,7 @@ async def settings_query(bot, query):
      chat_ids = await Client.ask(chat_id=query.message.chat.id, text="<b>❪ SET TARGET CHAT ❫\n\nForward a message from Your target chat\n/cancel - cancel this process</b>")
      if chat_ids.text=="/cancel":
         return await chat_ids.reply_text(
-                  "<b>process canceled</b>",
+                  "<b>Pʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟᴇᴅ 😮‍💨 !</b>",
                   reply_markup=InlineKeyboardMarkup(buttons))
      elif not chat_ids.forward_date:
         return await chat_ids.reply("**This is not a forward message**")
@@ -98,7 +98,7 @@ async def settings_query(bot, query):
      TEXT = Script.BOT_DETAILS if bot['is_bot'] else Script.USER_DETAILS
      buttons = [[InlineKeyboardButton('❌ Remove ❌', callback_data=f"settings#removebot")
                ],
-               [InlineKeyboardButton('back', callback_data="settings#bots")]]
+               [InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data="settings#bots")]]
      await query.message.edit_text(
         TEXT.format(bot['name'], bot['id'], bot['username']),
         reply_markup=InlineKeyboardMarkup(buttons))
@@ -114,7 +114,7 @@ async def settings_query(bot, query):
      chat = await db.get_channel_details(user_id, chat_id)
      buttons = [[InlineKeyboardButton('❌ Remove ❌', callback_data=f"settings#removechannel_{chat_id}")
                ],
-               [InlineKeyboardButton('back', callback_data="settings#channels")]]
+               [InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data="settings#channels")]]
      await query.message.edit_text(
         f"<b><u>📄 CHANNEL DETAILS</b></u>\n\n<b>- TITLE:</b> <code>{chat['title']}</code>\n<b>- CHANNEL ID: </b> <code>{chat['chat_id']}</code>\n<b>- USERNAME:</b> {chat['username']}",
         reply_markup=InlineKeyboardMarkup(buttons))
@@ -138,7 +138,7 @@ async def settings_query(bot, query):
                       callback_data="settings#seecaption")])
         buttons[-1].append(InlineKeyboardButton('🗑️ Delete Caption', 
                       callback_data="settings#deletecaption"))
-     buttons.append([InlineKeyboardButton('back', 
+     buttons.append([InlineKeyboardButton('«« ʙΔᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text(
         "<b><u>CUSTOM CAPTION</b></u>\n\n<b>You can set a custom caption to videos and documents. Normaly use its default caption</b>\n\n<b><u>AVAILABLE FILLINGS:</b></u>\n- <code>{filename}</code> : Filename\n- <code>{size}</code> : File size\n- <code>{caption}</code> : default caption",
@@ -149,7 +149,7 @@ async def settings_query(bot, query):
      buttons = [[InlineKeyboardButton('🖋️ Edit Caption', 
                   callback_data="settings#addcaption")
                ],[
-               InlineKeyboardButton('back', 
+               InlineKeyboardButton('«« ʙΔᴄᴋ', 
                  callback_data="settings#caption")]]
      await query.message.edit_text(
         f"<b><u>YOUR CUSTOM CAPTION</b></u>\n\n<code>{data['caption']}</code>",
@@ -187,10 +187,10 @@ async def settings_query(bot, query):
         await query.answer("I Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇss, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀsᴍᴀʀᴛ Oᴋᴀʏ 😏", show_alert=True)
         return
      await query.message.delete()
-     caption = await bot.ask(query.message.chat.id, text="Send your custom caption\n/cancel - <code>cancel this process</code>")
+     caption = await bot.ask(query.message.chat.id, text="Sᴇɴᴅ ʏᴏᴜʀ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴩᴛɪᴏɴ ᴍᴀʜɴ.. 😇\n/cancel - <code>ᴛᴏ ᴄᴀɴᴄᴇʟ ᴛʜᴇ ᴩʀᴏᴄᴇꜱꜱ</code>")
      if caption.text=="/cancel":
         return await caption.reply_text(
-                  "<b>process canceled !</b>",
+                  "<b>Pʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟᴇᴅ 😮‍💨 !</b>",
                   reply_markup=InlineKeyboardMarkup(buttons))
      try:
          caption.text.format(filename='', size='', caption='')
