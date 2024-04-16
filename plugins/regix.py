@@ -24,10 +24,10 @@ async def pub_(bot, message):
     temp.CANCEL[user] = False
     frwd_id = message.data.split("_")[2]
     if temp.lock.get(user) and str(temp.lock.get(user))=="True":
-      return await message.answer("please wait until previous task complete", show_alert=True)
+      return await message.answer("Pʟᴇᴀꜱᴇ ᴡᴀɪᴛ uɴᴛɪʟ ᴩʀᴇᴠɪᴏᴜꜱ ᴩʀᴏᴄᴇꜱꜱ ᴄᴏᴍᴩʟᴇᴛᴇ 🥹 ᴊᴜꜱᴛ ᴛʜɪɴᴋ ᴀʙᴏᴜᴛ ᴍᴇ ᴀʟꜱᴏ🫡🫡", show_alert=True)
     sts = STS(frwd_id)
     if not sts.verify():
-      await message.answer("your are clicking on my old button", show_alert=True)
+      await message.answer("Yᴏᴜʀ ᴀʀᴇ ᴄʟɪᴄᴋɪɴɢ oɴ ᴍʏ ᴏʟᴅ ʙᴜᴛᴛᴏɴ, ᴩʟᴇᴀꜱᴇ ɢᴇᴛ ɪᴛ ᴀɢᴀɪɴ 😇.", show_alert=True)
       return await message.message.delete()
     i = sts.get(full=True)
     if i.TO in temp.IS_FRWD_CHAT:
@@ -98,11 +98,11 @@ async def pub_(bot, message):
                    sts.add('total_files')
                    await asyncio.sleep(sleep) 
         except Exception as e:
-            await msg_edit(m, f'<b>ERROR:</b>\n<code>{e}</code>', wait=True)
+            await msg_edit(m, f'<b>Eʀʀᴏʀ 🚨 :</b>\n<code>{e}</code>', wait=True)
             temp.IS_FRWD_CHAT.remove(sts.TO)
             return await stop(client, user)
         temp.IS_FRWD_CHAT.remove(sts.TO)
-        await send(client, user, "<b>🎉 ғᴏʀᴡᴀᴅɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇᴅ</b>")
+        await send(client, user, "<b>🎉 ᦔᴏʀᴡᴀᴅɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇᴅ</b>")
         await edit(m, 'ᴄᴏᴍᴘʟᴇᴛᴇᴅ', "completed", sts) 
         await stop(client, user)
 
@@ -182,8 +182,8 @@ async def edit(msg, title, status, sts):
    estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
    estimated_total_time = estimated_total_time if estimated_total_time != '' else '0 s'
    if status in ["cancelled", "completed"]:
-      button.append([InlineKeyboardButton('💟 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💟', url='https://t.me/venombotsupport')])
-      button.append([InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/venombotupdates')])
+      button.append([InlineKeyboardButton('💟 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💟', url='https://t.me/MOD_MOVIEZ_X')])
+      button.append([InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/BOT_CRACKER')])
    else:
       button.append([InlineKeyboardButton('• ᴄᴀɴᴄᴇʟ', 'terminate_frwd')])
    await msg_edit(msg, text, InlineKeyboardMarkup(button))
