@@ -24,7 +24,7 @@ async def settings_query(bot, query):
   buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data="settings#main")]]
   if type=="main":
      await query.message.edit_text(
-       "<b>change your settings as your wish</b>",
+       "<b>📝 Eᴅɪᴛ Δɴᴅ ᴄʜᴀɴɢᴇ ꜱΞᴛᴛɪɴɢꜱ ᴀꜱ ʏᴏᴜʀ ᴡɪꜱʜ.......\n<blockquote>ᴩʀᴏ ✨</blockquote></b>",
        reply_markup=main_buttons())
 
   elif type=="bots":
