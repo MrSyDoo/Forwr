@@ -46,7 +46,7 @@ def unpack_new_file_id(new_file_id):
     )
     return file_id
 
-@Client.on_message(filters.command("unequify") & filters.private)
+@Client.on_message(filters.command("equify") & filters.private)
 async def unequify(client, message):
     if BOTCRACKER_CHNL and not await is_reqb_subscribed(bot, message):
         try:
@@ -66,27 +66,26 @@ async def unequify(client, message):
               ]
         ]
         await bot.send_message(
-            chat_id=message.from_user.id,
             text="ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
-   user_id = message.from_user.id
-   temp.CANCEL[user_id] = False
-   if temp.lock.get(user_id) and str(temp.lock.get(user_id))=="True":
-      return await message.reply("**please wait until previous task complete**")
-   _bot = await db.get_bot(user_id)
-   if not _bot or _bot['is_bot']:
-      return await message.reply("<b>ɴᴇᴇᴅ ᴜꜱᴇʀʙᴏᴛ ᴛᴏ ᴅᴏ ᴛʜɪꜱ ᴘʀᴏᴄᴇꜱꜱ. ᴘʟᴇᴀꜱᴇ ᴀᴅᴅ ᴀ ᴜꜱᴇʀʙᴏᴛ ᴜꜱɪɴɢ /settings</b>")
-   target = await client.ask(user_id, text="**ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ꜰʀᴏᴍ ᴛᴀʀɢᴇᴛ ᴄʜᴀᴛ ᴏʀ ꜱᴇɴᴅ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ʟɪɴᴋ.**\n/cancel - `cancel this process`")
-   if target.text.startswith("/"):
-      return await message.reply("**ᴘʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟʟᴇᴅ !**")
-   elif target.text:
-      regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
-      match = regex.match(target.text.replace("?single", ""))
-      if not match:
-         return await message.reply('**Invalid link**')
+    user_id = message.from_user.id
+    temp.CANCEL[user_id] = False
+    if temp.lock.get(user_id) and str(temp.lock.get(user_id))=="True":
+       return await message.reply("**please wait until previous task complete**")
+    _bot = await db.get_bot(user_id)
+    if not _bot or _bot['is_bot']:
+       return await message.reply("<b>ɴᴇᴇᴅ ᴜꜱᴇʀʙᴏᴛ ᴛᴏ ᴅᴏ ᴛʜɪꜱ ᴘʀᴏᴄᴇꜱꜱ. ᴘʟᴇᴀꜱᴇ ᴀᴅᴅ ᴀ ᴜꜱᴇʀʙᴏᴛ ᴜꜱɪɴɢ /settings</b>")
+    target = await client.ask(user_id, text="**ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ꜰʀᴏᴍ ᴛᴀʀɢᴇᴛ ᴄʜᴀᴛ ᴏʀ ꜱᴇɴᴅ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ʟɪɴᴋ.**\n/cancel - `cancel this process`")
+    if target.text.startswith("/"):
+       return await message.reply("**ᴘʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟʟᴇᴅ !**")
+    elif target.text:
+       regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
+       match = regex.match(target.text.replace("?single", ""))
+       if not match:
+          return await message.reply('**Invalid link**')
       chat_id = match.group(4)
       last_msg_id = int(match.group(5))
       if chat_id.isnumeric():
