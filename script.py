@@ -69,7 +69,7 @@ I can forward all message from one channel to another channel</i>
   TEXT = """
 ╔════❰ ғ0ʀᴡᴀʀᴅ sᴛᴀᴛᴜs  ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼<b>🕵 ғᴇᴄʜᴇᴅ Msɢ :</b> <code>{}</code>
+║┣⪼<b>🕵 ғᴇᴛᴄʜᴇᴅ Msɢ :</b> <code>{}</code>
 ║┃
 ║┣⪼<b>✅ sᴜᴄᴄᴇғᴜʟʟʏ Fᴡᴅ :</b> <code>{}</code>
 ║┃
@@ -84,6 +84,8 @@ I can forward all message from one channel to another channel</i>
 ║┣⪼<b>📊 Cᴜʀʀᴇɴᴛ Sᴛᴀᴛᴜs:</b> <code>{}</code>
 ║┃
 ║┣⪼<b>𖨠 Pᴇʀᴄᴇɴᴛᴀɢᴇ:</b> <code>{}</code> %
+║┃
+║┣⪼<b>🌋 Pᴏᴡᴇʀᴇᴅᴇᴅ ʙʏ: <a href="https://t.me/Bot_Cracker">B𝚘ᴛ ᑕяΔ¢к℮ґ 🎋</a></b>
 ║╰━━━━━━━━━━━━━━━➣ 
 ╚════❰ {} ❱══❍⊱❁۪۪
 """
