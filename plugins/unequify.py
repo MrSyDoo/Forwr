@@ -139,7 +139,7 @@ async def unequify(client, message):
     except Exception as e:
         temp.lock[user_id] = False 
         await sts.edit(f"**ERROR**\n`{e}`")
-       return await bot.stop()
+        return await bot.stop()
     temp.lock[user_id] = False
     await sts.edit(Script.DUPLICATE_TEXT.format(total, deleted, "ᴄᴏᴍᴘʟᴇᴛᴇᴅ"), reply_markup=COMPLETED_BTN)
     await bot.stop()
