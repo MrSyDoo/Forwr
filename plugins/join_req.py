@@ -1,6 +1,6 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import ChatJoinRequest
-from database import db
+from database import db, bd
 from info import AUTH_CHANNEL, ADMINS, SYD_CHANNEL
 
 @Client.on_chat_join_request(filters.chat(AUTH_CHANNEL))
