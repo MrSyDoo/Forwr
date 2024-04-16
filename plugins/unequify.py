@@ -1,7 +1,8 @@
 import re, asyncio
 from database import Database, db
 from config import temp
-from .test import CLIENT 
+from .test import CLIENT
+from info import BOTCRACKER_CHNL
 from script import Script
 import base64
 from pyrogram.file_id import FileId
@@ -46,6 +47,30 @@ def unpack_new_file_id(new_file_id):
 
 @Client.on_message(filters.command("unequify") & filters.private)
 async def unequify(client, message):
+    if BOTCRACKER_CHNL and not await is_req_subscribed(bot, message):
+        try:
+            invite_link = await bot.create_chat_invite_link(int(BOTCRACKER_CHNL), creates_join_request=True)
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        btn = [
+            [
+                InlineKeyboardButton(
+                    "📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌", url=invite_link.invite_link
+                )
+            ],[
+                InlineKeyboardButton(
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheck'
+                )
+              ]
+        ]
+        await bot.send_message(
+            chat_id=message.from_user.id,
+            text="ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.",
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode=enums.ParseMode.MARKDOWN
+            )
+        return
    user_id = message.from_user.id
    temp.CANCEL[user_id] = False
    if temp.lock.get(user_id) and str(temp.lock.get(user_id))=="True":
