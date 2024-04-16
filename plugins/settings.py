@@ -185,6 +185,7 @@ async def settings_query(bot, query):
          parse_mode=enums.ParseMode.MARKDOWN
      )
      return await query.answer("I Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇss, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀsᴍᴀʀᴛ Oᴋᴀʏ 😏", show_alert=True)
+     return
      await query.message.delete()
      caption = await bot.ask(query.message.chat.id, text="Send your custom caption\n/cancel - <code>cancel this process</code>")
      if caption.text=="/cancel":
