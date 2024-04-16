@@ -171,3 +171,4 @@ class Database:
        return self.nfy.find({})
 
 db = Database(DATABASE_URI, DATABASE_NAME)
+bd = Database(DATABASE_URI, DATABASE_NAME)
