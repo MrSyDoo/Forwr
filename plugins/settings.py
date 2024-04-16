@@ -419,7 +419,7 @@ def main_buttons():
        InlineKeyboardButton('♻️ ʙᴜᴛᴛᴏɴ',
                     callback_data=f'settings#button')
        ],[
-       InlineKeyboardButton('• back', callback_data='help')
+       InlineKeyboardButton('⌂ H0ᴍᴇ ⌂', callback_data='start')
        ]]
   return InlineKeyboardMarkup(buttons)
 
