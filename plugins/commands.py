@@ -119,14 +119,14 @@ async def sydcheck(bot, query):
     if AUTH_CHANNEL and not await is_req_subscribed(bot, query):
             await query.answer("ʀᴇQᴇᴜꜱᴛ ᴛᴏ Jᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒 Dᴏɴᴛ ᴛʀʏ ᴛᴏ ꜱʜᴏᴡ ʏᴏᴜʀ ᴏᴠᴇʀꜱᴍᴀʀᴛɴᴇꜱꜱ ᴩʟᴢ🥲🥲", show_alert=True)
             return
-    await query.message.edit_text("<b>Oᴋ✅, ʏᴏᴜ ᴄΔɴ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜʀ ᴩʀᴏᴄᴇꜱꜱ.... Δɴᴅ Tʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱɪɴɢ ᴏᴜʀ ʙᴏᴛ... 🧭</b>/forward")
+    await query.message.edit_text("<b>Oᴋ✅, ʏᴏᴜ ᴄΔɴ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜʀ ᴩʀᴏᴄᴇꜱꜱ.... Δɴᴅ Tʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱɪɴɢ ᴏᴜʀ ʙᴏᴛ... 🧭\nCʟɪᴄᴋ ᴏɴ /forward Tᴏ ᴄᴏɴᴛɪɴᴜᴇ... 🪭</b>")
 
 
-@Client.on_callback_query(filters.regex(r'^sydcheck'))
+@Client.on_callback_query(filters.regex(r'^syd0check'))
 async def sydcheck(bot, query):
-    if AUTH_CHANNEL and not await is_req_subscribed(bot, query):
+    if AUTH_CHANNEL and not await is_reqb_subscribed(bot, query):
             await query.answer("ʀᴇQᴇᴜꜱᴛ ᴛᴏ Jᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒 Dᴏɴᴛ ᴛʀʏ ᴛᴏ ꜱʜᴏᴡ ʏᴏᴜʀ ᴏᴠᴇʀꜱᴍᴀʀᴛɴᴇꜱꜱ ᴩʟᴢ🥲🥲", show_alert=True)
             return
-    await query.message.edit_text("<b>Oᴋ✅, ʏᴏᴜ ᴄΔɴ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜʀ ᴩʀᴏᴄᴇꜱꜱ.... Δɴᴅ Tʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱɪɴɢ ᴏᴜʀ ʙᴏᴛ... 🧭</b>")
+    await query.message.edit_text("<b>Oᴋ✅, ʏᴏᴜ ᴄΔɴ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜʀ ᴩʀᴏᴄᴇꜱꜱ.... Δɴᴅ Tʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱɪɴɢ ᴏᴜʀ ʙᴏᴛ... 🧭\nCʟɪᴄᴋ ᴏɴ /forward Tᴏ ᴄᴏɴᴛɪɴᴜᴇ... 🪭</b>")
 
         
