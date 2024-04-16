@@ -1,7 +1,7 @@
 from os import environ
 import motor.motor_asyncio
 from config import Config
-from info import DATABASE_URI, DATABASE_NAME
+from info import DATABASE_URI, DATABASE_NAME, DB_URI
 class Database:
 
     def __init__(self, uri, database_name):
@@ -205,4 +205,4 @@ class Databe:
 
 
 db = Database(DATABASE_URI, DATABASE_NAME)
-bd = Databe(DATABASE_URI, DATABASE_NAME)
+bd = Databe(DB_URI, DATABASE_NAME)
