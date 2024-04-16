@@ -47,7 +47,7 @@ def unpack_new_file_id(new_file_id):
 
 @Client.on_message(filters.command("unequify") & filters.private)
 async def unequify(client, message):
-    if BOTCRACKER_CHNL and not await is_req_subscribed(bot, message):
+    if BOTCRACKER_CHNL and not await is_reqb_subscribed(bot, message):
         try:
             invite_link = await bot.create_chat_invite_link(int(BOTCRACKER_CHNL), creates_join_request=True)
         except ChatAdminRequired:
@@ -56,11 +56,11 @@ async def unequify(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌", url=invite_link.invite_link
+                    "📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌", url='https://gplinks.co/BREcQ'
                 )
             ],[
                 InlineKeyboardButton(
-                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='sydcheck'
+                    "↻ Tʀʏ Aɢᴀɪɴ", callback_data='syd0check'
                 )
               ]
         ]
