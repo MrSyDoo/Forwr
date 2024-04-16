@@ -25,6 +25,9 @@ class Database:
 
     async def find_join_req(self, id):
         return bool(await self.req.find_one({'id': id}))
+
+    async def find_join_reqa(self, id):
+        return bool(await self.req.find_one({'id': id}))
         
     async def add_join_req(self, id):
         await self.req.insert_one({'id': id})
