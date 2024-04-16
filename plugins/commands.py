@@ -69,6 +69,9 @@ async def helpcb(bot, query):
 async def how_to_use(bot, query):
     buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await bot.edit_message_media(
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
         text=Script.HOW_USE_TXT,
         reply_markup=reply_markup,
@@ -78,6 +81,11 @@ async def how_to_use(bot, query):
 @Client.on_callback_query(filters.regex(r'^back'))
 async def back(bot, query):
     reply_markup = InlineKeyboardMarkup(main_buttons)
+    await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
        reply_markup=reply_markup,
        text=Script.START_TXT.format(
@@ -87,6 +95,11 @@ async def back(bot, query):
 async def about(bot, query):
     buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
         reply_markup=reply_markup,
