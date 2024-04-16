@@ -3,6 +3,7 @@ from database import Database, db
 from config import temp
 from .test import CLIENT
 from info import BOTCRACKER_CHNL
+from MrSyD import is_reqb_subscribed
 from script import Script
 import base64
 from pyrogram.file_id import FileId
