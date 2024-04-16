@@ -15,10 +15,10 @@ async def del_requests(client, message):
   
 @Client.on_chat_join_request(filters.chat(SYD_CHANNEL))
 async def join_reqsa(client, message: ChatJoinRequest):
-  if not await db.find_join_req(message.from_user.id):
-    await db.add_join_req(message.from_user.id)
+  if not await bd.find_join_req(message.from_user.id):
+    await bd.add_join_req(message.from_user.id)
 
 @Client.on_message(filters.command("delreqa") & filters.private & filters.user(ADMINS))
-async def del_requests(client, message):
-    await db.del_join_req()    
+async def del_requestsa(client, message):
+    await bd.del_join_req()    
     await message.reply("<b>⚙ ꜱᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ᴄʜᴀɴɴᴇʟ ʟᴇғᴛ ᴜꜱᴇʀꜱ ᴅᴇʟᴇᴛᴇᴅ</b>")
