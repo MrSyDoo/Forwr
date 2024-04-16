@@ -11,6 +11,7 @@ def is_enabled(value, default):
      
  
 DATABASE_URI = environ.get('DATABASE_URI', "")
+DB_URI = environ.get('DB_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 auth_channel = environ.get('AUTH_CHANNEL', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
