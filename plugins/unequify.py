@@ -8,7 +8,7 @@ from script import Script
 import base64
 from pyrogram.file_id import FileId
 from pyrogram import Client, filters, enums
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 
 CLIENT = CLIENT()
 COMPLETED_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ •', url='https://t.me/crazysupportz')],
