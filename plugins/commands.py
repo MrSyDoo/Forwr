@@ -9,7 +9,7 @@ from MrSyD import is_req_subscribed, is_reqb_subscribed
 from info import PICS
 from script import Script
 from pyrogram import Client, filters, enums
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument, InputMediaPhoto
 
 main_buttons = [[
         InlineKeyboardButton('🌋 Sᴜᴩᴩ0ʀᴛ Gʀ0ᴜᴩ 🌋', url='https://t.me/venombotupdates'),
@@ -107,8 +107,8 @@ async def about(bot, query):
     )
 
 @Client.on_callback_query(filters.regex(r'^aboutt'))
-async def about(bot, query):
-    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='start')]]
+async def aboutt(bot, query):
+    buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='back')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
