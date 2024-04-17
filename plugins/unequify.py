@@ -46,7 +46,7 @@ def unpack_new_file_id(new_file_id):
     )
     return file_id
 
-@Client.on_message(filters.command("equify") & filters.private)
+@Client.on_message(filters.command("unequify") & filters.private)
 async def unequify(client, message):
     if BOTCRACKER_CHNL and not await is_reqb_subscribed(bot, message):
         try:
