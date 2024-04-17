@@ -61,6 +61,11 @@ async def helpcb(bot, query):
             InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='back')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
         text=Script.HELP_TXT,
         reply_markup=reply_markup)
@@ -70,6 +75,8 @@ async def how_to_use(bot, query):
     buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
             InputMediaPhoto(random.choice(PICS))
     )
     await query.message.edit_text(
@@ -110,6 +117,11 @@ async def about(bot, query):
 async def aboutt(bot, query):
     buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='back')]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
         reply_markup=reply_markup,
@@ -121,6 +133,11 @@ async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
     buttons = [[InlineKeyboardButton('«« ʙΔᴄᴋ', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await bot.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+    )
     await query.message.edit_text(
         text=Script.STATUS_TXT.format(users_count, bots_count, temp.forwardings),
         reply_markup=reply_markup,
