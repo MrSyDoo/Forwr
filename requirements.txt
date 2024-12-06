@@ -2,6 +2,7 @@ pyrogram
 tgcrypto
 pyromod
 pyropatch
+pyrofork
 humanize 
 motor==2.5.1
 TgCrypto
