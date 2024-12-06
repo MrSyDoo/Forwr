@@ -16,7 +16,7 @@ main_buttons = [[
         InlineKeyboardButton('🗞️ Uᴩᴅᴀᴛᴇꜱ CʜΔɴɴᴇʟ 🗞️', url='https://t.me/BOT_CRACKER')
         ],[
         InlineKeyboardButton('🎐 Hᴇʟᴩ 🎐', callback_data='help'),
-        InlineKeyboardButton('', url='')
+        InlineKeyboardButton('D', url='https://t.me/BOT_CRACKER'),
         InlineKeyboardButton('🔍 Δʙᴏᴜᴛ 🔎', callback_data='aboutt')
         
 
